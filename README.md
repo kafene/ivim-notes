@@ -37,7 +37,7 @@ npm run start
 Running with Docker (may need `sudo`):
 ```
 docker build -t ivim-notes .
-docker run -p 8300:8300 ivim-notes .
+docker run -p 8300:8300 ivim-notes
 ```
 
 Open <http://localhost:8300/> to use the app.
