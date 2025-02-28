@@ -22,14 +22,12 @@ export default function NoteEdit({ refreshNotes }) {
   utils.fetchNote(id, useEffect, setNote, setLoading, setError);
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newTitle = String(e.target.value).trim();
-    setTitleValid(newTitle !== "");
-    setNote(n => (n ? ({...n, title: newTitle}) : null));
+    setTitleValid(String(e.target.value).trim() !== "");
+    setNote(n => (n ? ({...n, title: e.target.value}) : null));
   };
   const handleDescriptionChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newDescription = String(e.target.value);
-    setDescriptionValid(newDescription.trim() !== "");
-    setNote(n => (n ? ({...n, description: newDescription}) : null));
+    setDescriptionValid(String(e.target.value).trim() !== "");
+    setNote(n => (n ? ({...n, description: e.target.value}) : null));
   };
 
   /* Close when click outside modal */
@@ -43,7 +41,6 @@ export default function NoteEdit({ refreshNotes }) {
   const validate = (note) => {
     const title = String(note.title).trim();
     const description = String(note.description);
-    setNote({title, description});
 
     const titleValid = title !== "";
     const descriptionValid = note.description.trim() !== "";
