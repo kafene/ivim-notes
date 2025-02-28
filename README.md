@@ -56,8 +56,12 @@ docker run --rm ivim-notes npm test
 
 ## Screenshots
 
-![List of notes](/screenshots/index.png?raw=true "List of notes")
+**List of notes:**
 
-![Viewing a note](/screenshots/view.png?raw=true "Viewing a note")
+![](/screenshots/index.png?raw=true)
 
-![Editing a note](/screenshots/edit.png?raw=true "Editing a note")
+**Viewing a note:**
+![](/screenshots/view.png?raw=true)
+
+**Editing a note:**
+![](/screenshots/edit.png?raw=true)
