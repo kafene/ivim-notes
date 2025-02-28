@@ -44,13 +44,13 @@ export default function NoteView({ refreshNotes }) {
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 w-full max-w-full sm:max-w-4xl" onClick={e => e.stopPropagation()}>
-            <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 border-gray-100 border-b-1">
               <div className="mt-3 text-center sm:mt-0 sm:text-left">
                 <div id="title" className="block p-2.5 w-full text-lg font-semibold border-gray-100 border-b-1">
                   {note?.title || ""}
                 </div>
                 <div className="mt-2">
-                  <div id="description" className="block p-2.5 w-full text-sm">
+                  <div id="description" className="block p-2.5 w-full text-sm whitespace-pre-wrap">
                     {note?.description || ""}
                   </div>
                 </div>
