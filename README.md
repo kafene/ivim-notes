@@ -19,7 +19,7 @@ There is certainly room for improvement:
 
 - **Better error handling/display**: Frontend validation/restrictions are used to prevent invalid inputs from reaching the server, but if they do, backend errors aren't displayed very nicely yet.
 - **Styling**: Lots of Tailwind classes litter the JSX, used in the interest of time and getting something that looked relatively decent, but they should be pulled into a .css file.
-- **Test Failure**: One test fails with a mysterious ECONNRESET error - something to look into/discuss.
+- ~~**Test Failure**: One test fails with a mysterious ECONNRESET error - something to look into/discuss.~~ Fixed, but I don't know how I did it!
 - Could prompt before closing the modal if any inputs have changed, or save its state so that reopening it populates any changes that would have been lost.
 
 ## Running the app
