@@ -26,21 +26,21 @@ There is certainly room for improvement:
 
 Setup:
 ```
-git clone https://github.com/kafene/ivim-notes
-cd ivim-notes
+git clone https://github.com/kafene/ivim-notes && cd ivim-notes/
 ```
 
-Running directly:
+Running directly - this will reload the server when files change:
 ```
 npm run start
 ```
 
-Running with Docker:
+Running with Docker (may need `sudo`):
 ```
-docker build -t ivim-notes . # may need `sudo`
-docker run -p 8300:8300 ivim-notes . # may need `sudo`
-# open <http://localhost:8300/>
+docker build -t ivim-notes .
+docker run -p 8300:8300 ivim-notes .
 ```
+
+Open <http://localhost:8300/> to use the app.
 
 ## Testing
 
