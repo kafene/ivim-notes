@@ -16,10 +16,6 @@ interface NotesListProps {
 }
 
 const NotesList: React.FC<NotesListProps> = ({ notes, refreshNotes }) => {
-  if (notes.length === 0) {
-    return <p>No notes available.</p>;
-  }
-
   const navigate = useNavigate();
 
   const handleDelete = (e: Event, id: number) => {
@@ -30,19 +26,19 @@ const NotesList: React.FC<NotesListProps> = ({ notes, refreshNotes }) => {
   };
 
   return (
-    <ul id="notes" className="w-full sm:w-256 font-medium text-gray-900 bg-white border border-gray-200 rounded-lg text-left">
+    <ul id="notes" className="w-full sm:w-256 font-medium text-gray-900 bg-white border border-gray-200 border-b-0 rounded-lg text-left">
       <li
         key={0}
-        className="w-full px-4 py-2 border-gray-200 bg-green-200 cursor-pointer hover:bg-green-300"
+        className="w-full px-4 py-2 border-gray-200 bg-green-200 cursor-pointer hover:bg-green-300 text-center"
         title="Create Note"
         onClick={() => navigate('/note/edit')}
       >
-        &#x2795;
+        New Note &#x2795;
       </li>
       {notes.map(note => (
         <li
           key={note.id}
-          className="w-full px-3 py-2 border-gray-200 cursor-pointer hover:bg-gray-100 flex justify-between"
+          className="w-full px-3 py-2 border-gray-200 border-b cursor-pointer hover:bg-gray-100 flex justify-between"
           onClick={() => navigate(`/note/view/${note.id}`)}
         >
           <div className="title basis-full min-w-0" title={note.title}>
